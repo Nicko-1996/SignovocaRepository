@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="PlayTime" size="4.000000 3.983936" />
+    <ImageTarget name="Number9" size="1.000000 0.997988" />
+    <ImageTarget name="Number8" size="1.000000 0.997992" />
+    <ImageTarget name="Number7" size="1.000000 0.995984" />
+    <ImageTarget name="Number6" size="1.000000 1.000000" />
+    <ImageTarget name="Number5" size="1.000000 0.993988" />
+    <ImageTarget name="Number4" size="1.000000 0.995984" />
+    <ImageTarget name="Number3" size="1.000000 0.996000" />
+    <ImageTarget name="Number2" size="1.000000 0.993988" />
+    <ImageTarget name="Number1" size="1.000000 0.993988" />
+    <ImageTarget name="Number0" size="1.000000 1.000000" />
+    <ImageTarget name="letter_A" size="1.000000 0.995984" />
+    <ImageTarget name="letter_B" size="1.000000 0.995984" />
+    <ImageTarget name="letter_C" size="1.000000 0.997988" />
+    <ImageTarget name="letter_D" size="1.000000 0.995984" />
+    <ImageTarget name="letter_E" size="1.000000 0.997988" />
+    <ImageTarget name="letter_F" size="1.000000 0.995984" />
+    <ImageTarget name="letter_G" size="1.000000 0.995984" />
+    <ImageTarget name="letter_H" size="1.000000 0.993964" />
+    <ImageTarget name="letter_I" size="1.000000 0.997992" />
+    <ImageTarget name="letter_J" size="1.000000 0.993976" />
+    <ImageTarget name="letter_K" size="1.000000 0.992000" />
+    <ImageTarget name="letter_L" size="1.000000 0.997988" />
+    <ImageTarget name="letter_M" size="1.000000 1.000000" />
+    <ImageTarget name="letter_N" size="1.000000 1.000000" />
+    <ImageTarget name="letter_O" size="1.000000 0.997988" />
+    <ImageTarget name="letter_P" size="1.000000 0.995976" />
+    <ImageTarget name="letter_R" size="1.000000 0.995976" />
+    <ImageTarget name="letter_Q" size="1.000000 0.995984" />
+    <ImageTarget name="letter_S" size="1.000000 0.995984" />
+    <ImageTarget name="letter_T" size="1.000000 0.993988" />
+    <ImageTarget name="letter_U" size="1.000000 0.993976" />
+    <ImageTarget name="letter_V" size="1.000000 0.997988" />
+    <ImageTarget name="letter_W" size="1.000000 0.994012" />
+    <ImageTarget name="letter_X" size="1.000000 0.993952" />
+    <ImageTarget name="letter_Y" size="1.000000 1.000000" />
+    <ImageTarget name="letter_Z" size="1.000000 0.997996" />
+  </Tracking>
+</QCARConfig>
