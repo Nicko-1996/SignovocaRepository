@@ -58,7 +58,7 @@ public class gameLogics : MonoBehaviour {
 				Z.name = "x" + i;
 				Debug.Log ("ZZZZZZZZZZZZZZZ:" + Z);
 				Vector3 pos1 = Z.transform.position;    
-				Z.transform.position = new Vector3 (pos1.x, pos1.y + 40f, pos1.z);
+				Z.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
 				Z.transform.rotation = Quaternion.Euler (0, 180, 0);
 				AnswerNumber = usedValues2[i];
 			}
@@ -67,7 +67,7 @@ public class gameLogics : MonoBehaviour {
 			X.name = "x" + i;
 			Debug.Log ("XXXXXXXXXXXXXX:" + X);
 			Vector3 pos = X.transform.position;    
-			X.transform.position = new Vector3 (pos.x, pos.y + 40f, pos.z);
+			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z);
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
 		}
 			
