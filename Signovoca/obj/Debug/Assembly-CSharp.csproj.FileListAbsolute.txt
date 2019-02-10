@@ -31,5 +31,3 @@ C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\Temp\bin\Deb
 C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\obj\Debug\Assembly-CSharp.dll
 C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\obj\Debug\Assembly-CSharp.pdb
-C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\Temp\bin\Debug\UnityEditor.UI.dll
-C:\Users\ikai.quezon\Documents\GitHub\SignovocaRepository\Signovoca\Temp\bin\Debug\UnityEditor.UI.xml
