@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="GoodMorning" size="1.000000 0.995798" />
+    <ImageTarget name="ThankYou" size="1.000000 0.997895" />
+    <ImageTarget name="ILoveYou" size="1.000000 0.997895" />
+    <ImageTarget name="HowAreYou" size="1.000000 0.997895" />
+    <ImageTarget name="Hi" size="1.000000 1.002105" />
+    <ImageTarget name="WhatIsUp" size="1.000000 0.995798" />
     <ImageTarget name="PlayTime" size="4.000000 3.983936" />
     <ImageTarget name="Number9" size="1.000000 0.997988" />
     <ImageTarget name="Number8" size="1.000000 0.997992" />
