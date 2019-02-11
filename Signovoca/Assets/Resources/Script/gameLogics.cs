@@ -5,13 +5,15 @@ using UnityEngine.UI;
 public class gameLogics : MonoBehaviour {
 
 	int[] RandomNumber;
-	
+
+
+
 	public GameObject[] planePlaces;
 	//Transform
 	public Transform[] modelPrefabs;
 	Transform X;
 	Transform Z;
-	public int GameAnswer;
+	public static int GameAnswer = 0;
 	int AnswerNumber;
 
 	public Transform[] imgTarget;
@@ -54,37 +56,45 @@ public class gameLogics : MonoBehaviour {
 		for(int i = 0; i < 3; i++) {
 			if (i == 0) {
 				//For the Image Target
+				AnswerNumber = usedValues [i];
 				Z = Instantiate (imgTarget[usedValues[i]], imgPlanePlace.transform.position, imgPlanePlace.transform.rotation) as Transform;
 				Z.transform.parent = GameObject.Find ("ImageTarget").transform;
 				Z.name = "x" + i;
-				Debug.Log ("ZZZZZZZZZZZZZZZ:" + Z);
 				Vector3 pos1 = Z.transform.position;    
 				Z.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
 				Z.transform.rotation = Quaternion.Euler (0, 180, 0);
-				GameAnswer = usedValues[i];
+
 
 			}
 			//for the Model Prefabs
 			X = Instantiate (modelPrefabs [usedValues[i]], planePlaces [usedValues2[i]].transform.position, planePlaces [i].transform.rotation) as Transform;
 			X.transform.parent = GameObject.Find ("ImageTarget").transform;
 			X.name = "x" + i;
-			Debug.Log ("XXXXXXXXXXXXXX:" + X);
 			Vector3 pos = X.transform.position;    
 			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
+			if (AnswerNumber == usedValues [i]) {
+				GameAnswer = usedValues2 [i];
+			}
 		}
 			
 	}
 
 	// Use this for initialization
 	void Start () {
-		UniqueRandomIntCount();
-		UniqueRandomInt();
-		Models();
+		ReloadGameLogics ();
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void ReloadGameLogics(){
+		UniqueRandomIntCount();
+		UniqueRandomInt();
+		Models();
 	}
 }
