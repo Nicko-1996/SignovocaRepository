@@ -55,7 +55,6 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 			GameScoreCounting ();
 		} else {
 			Debug.Log ("Wrong answer");
-			reload ();
 		}
 	
 	}

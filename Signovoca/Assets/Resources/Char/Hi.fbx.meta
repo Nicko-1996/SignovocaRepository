@@ -760,7 +760,6 @@ ModelImporter:
     7400006: Porl_Rig|ACTION_foot_roll
     7400008: Porl_Rig|ACTION_tongue_down
     9500000: //RootNode
-    11100000: //RootNode
     13700000: Body_MeshPart0
     13700002: Body_MeshPart1
     13700004: T-Shirt
@@ -782,7 +781,7 @@ ModelImporter:
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
@@ -790,7 +789,7 @@ ModelImporter:
       takeName: Armature|ArmatureAction
       firstFrame: 0
       lastFrame: 40
-      wrapMode: 2
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -4213,10 +4212,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
