@@ -139,13 +139,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\UITween\Prefabs\Click Effect Pref\ClickedWaveAnimation.cs" />
-    <Compile Include="Assets\UITween\ScenesExamplesScripts\ActivateOnEnable.cs" />
-    <Compile Include="Assets\UITween\ScenesExamplesScripts\CreateAnimImage.cs" />
-    <Compile Include="Assets\UITween\ScenesExamplesScripts\FollowClick.cs" />
-    <Compile Include="Assets\UITween\Scripts\EasyTween.cs" />
-    <Compile Include="Assets\UITween\Scripts\ReferencedFrom.cs" />
-    <Compile Include="Assets\UITween\Scripts\UITween.cs" />
     <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
