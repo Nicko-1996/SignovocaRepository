@@ -102,6 +102,7 @@
     <Compile Include="Assets\LeanTouch\Scripts\LeanTouch.cs" />
     <Compile Include="Assets\Resources\Script\LevelLoader.cs" />
     <Compile Include="Assets\Resources\Script\LoadScene.cs" />
+    <Compile Include="Assets\Resources\Script\QuitConfirm.cs" />
     <Compile Include="Assets\Resources\Script\SplashScreen.cs" />
     <Compile Include="Assets\Resources\Script\gameLogics.cs" />
     <Compile Include="Assets\Root\AppContent\scripts\ProgressBar.cs" />
