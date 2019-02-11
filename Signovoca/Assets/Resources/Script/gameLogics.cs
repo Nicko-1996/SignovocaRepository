@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class gameLogics : MonoBehaviour {
 
 	int[] RandomNumber;
-	
+
+
+
 	public GameObject[] planePlaces;
 	//Transform
 	public Transform[] modelPrefabs;
@@ -80,9 +82,7 @@ public class gameLogics : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		UniqueRandomIntCount();
-		UniqueRandomInt();
-		Models();
+		ReloadGameLogics ();
 
 
 	}
@@ -90,5 +90,11 @@ public class gameLogics : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void ReloadGameLogics(){
+		UniqueRandomIntCount();
+		UniqueRandomInt();
+		Models();
 	}
 }

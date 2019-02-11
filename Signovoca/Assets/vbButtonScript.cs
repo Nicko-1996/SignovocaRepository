@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Vuforia;
+using UnityEngine.SceneManagement;
 
 public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
@@ -10,18 +11,23 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public Text txtScoreCount;
 
+	public GameObject shitHead;
+
 	public GameObject CorrectWrong;
 	public Transform[] CorWro;
 
-	int ScoreCount = 0;
+	public static int ScoreCount = 0;
 
 	Transform TransCorWro;
 
 	private GameObject vbButtonsObject1;
 	private GameObject vbButtonsObject2;
 	private GameObject vbButtonsObject3;
+
 	// Use this for initialization
 	void Start () {
+		shitHead = GameObject.Find ("Directional Light");
+
 		vbButtonsObject1 = GameObject.Find ("cmdAnswer1");
 		vbButtonsObject2 = GameObject.Find ("cmdAnswer2");
 		vbButtonsObject3 = GameObject.Find ("cmdAnswer3");
@@ -61,13 +67,9 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	void GameScoreCounting(){
 		ScoreCount += 1;
-	/*	TransCorWro = Instantiate (CorWro[0], CorrectWrong.transform.position, CorrectWrong.transform.rotation) as Transform;
-		TransCorWro.transform.parent = GameObject.Find ("ImageTarget").transform;
-		TransCorWro.name = "x" + ScoreCount;
-		Vector3 pos1 = TransCorWro.transform.position;    
-		TransCorWro.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
-		TransCorWro.transform.rotation = Quaternion.Euler (0, 180, 0); */
+		checkWrongTransform ();
 		scoreCounter ();
+		reload ();
 	}
 
 	void TestFunction()
@@ -77,6 +79,21 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 
 	void scoreCounter(){
-		txtScoreCount.text = "Score: " + ScoreCount;
+		txtScoreCount.text = "Score: "+ ScoreCount.ToString();
 	}
+
+	void checkWrongTransform(){
+		TransCorWro = Instantiate (CorWro[0], CorrectWrong.transform.position, CorrectWrong.transform.rotation) as Transform;
+		TransCorWro.transform.parent = GameObject.Find ("ImageTarget").transform;
+		TransCorWro.name = "x" + ScoreCount;
+		Vector3 pos1 = TransCorWro.transform.position;    
+		TransCorWro.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
+		TransCorWro.transform.rotation = Quaternion.Euler (0, 180, 0); 
+	}
+
+	void reload(){
+		SceneManager.LoadScene ("GameScene");
+		DontDestroyOnLoad (shitHead);
+	}
+
 }
