@@ -7,7 +7,6 @@ public class gameLogics : MonoBehaviour {
 	int[] RandomNumber;
 
 
-
 	public GameObject[] planePlaces;
 	//Transform
 	public Transform[] modelPrefabs;
@@ -71,8 +70,9 @@ public class gameLogics : MonoBehaviour {
 			X.transform.parent = GameObject.Find ("ImageTarget").transform;
 			X.name = "x" + i;
 			Vector3 pos = X.transform.position;    
-			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
+			X.transform.position = new Vector3 (pos.x, -2f, pos.z);
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
+			X.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}

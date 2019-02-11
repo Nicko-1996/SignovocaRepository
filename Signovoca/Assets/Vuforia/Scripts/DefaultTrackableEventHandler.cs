@@ -15,6 +15,10 @@ namespace Vuforia
                                                 ITrackableEventHandler
     {
 
+		public Transform gameChar;
+		public Animation gameAnim;
+		public GameObject gamePlane;
+
         //------------Begin Sound----------
         public AudioSource soundTarget;
         public AudioClip clipTarget;
@@ -174,6 +178,7 @@ namespace Vuforia
 			if (mTrackableBehaviour.TrackableName == "letter_A")
 			{
 				playSound("sounds/letterA");
+
 			}
 
 			if (mTrackableBehaviour.TrackableName == "letter_B")

@@ -55,6 +55,7 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 			GameScoreCounting ();
 		} else {
 			Debug.Log ("Wrong answer");
+			reload ();
 		}
 	
 	}
@@ -67,7 +68,6 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	void GameScoreCounting(){
 		ScoreCount += 1;
-		checkWrongTransform ();
 		scoreCounter ();
 		reload ();
 	}
@@ -80,15 +80,6 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	void scoreCounter(){
 		txtScoreCount.text = "Score: "+ ScoreCount.ToString();
-	}
-
-	void checkWrongTransform(){
-		TransCorWro = Instantiate (CorWro[0], CorrectWrong.transform.position, CorrectWrong.transform.rotation) as Transform;
-		TransCorWro.transform.parent = GameObject.Find ("ImageTarget").transform;
-		TransCorWro.name = "x" + ScoreCount;
-		Vector3 pos1 = TransCorWro.transform.position;    
-		TransCorWro.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
-		TransCorWro.transform.rotation = Quaternion.Euler (0, 180, 0); 
 	}
 
 	void reload(){
