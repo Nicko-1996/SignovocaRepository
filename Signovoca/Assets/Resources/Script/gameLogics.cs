@@ -7,7 +7,6 @@ public class gameLogics : MonoBehaviour {
 	int[] RandomNumber;
 
 
-
 	public GameObject[] planePlaces;
 	//Transform
 	public Transform[] modelPrefabs;
@@ -26,10 +25,10 @@ public class gameLogics : MonoBehaviour {
  	void UniqueRandomInt()
 	{
 		for(int i = 0; i < 3; i++){
-			int val = Random.Range(0, 21);
+			int val = Random.Range(0, 5);
 			while(usedValues.Contains(val))
 			{
-				val = Random.Range(0, 21);
+				val = Random.Range(0, 5);
 			}
 			usedValues.Add(val);
 		}
@@ -61,9 +60,8 @@ public class gameLogics : MonoBehaviour {
 				Z.transform.parent = GameObject.Find ("ImageTarget").transform;
 				Z.name = "x" + i;
 				Vector3 pos1 = Z.transform.position;    
-				Z.transform.position = new Vector3 (pos1.x,pos1.y + 1f,pos1.z);
+				Z.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
 				Z.transform.rotation = Quaternion.Euler (0, 180, 0);
-				Z.transform.localScale = new Vector3 (0.05f, 1f, 0.05f);
 
 
 			}

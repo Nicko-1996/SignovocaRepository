@@ -13,27 +13,27 @@ public class SplashScreen : MonoBehaviour {
 
 	IEnumerator Start()
 	{
-        splashImage.canvasRenderer.SetAlpha(0.0f);
+		splashImage.canvasRenderer.SetAlpha(0.0f);
 		//splashText.canvasRenderer.SetAlpha(0.0f);
 
-        FadeIn();
-        yield return new WaitForSeconds(2.5f);
-        FadeOut();
-        yield return new WaitForSeconds(2.5f);
-        SceneManager.LoadScene(loadLevel);
+		FadeIn();
+		yield return new WaitForSeconds(2.5f);
+		FadeOut();
+		yield return new WaitForSeconds(2.5f);
+		SceneManager.LoadScene(loadLevel);
  
-    }
+	}
 
-    void FadeIn()
-    {
-        splashImage.CrossFadeAlpha(1.0f, 1.5f, false);
+	void FadeIn()
+	{
+		splashImage.CrossFadeAlpha(1.0f, 1.5f, false);
 		//splashText.CrossFadeAlpha(1.0f, 1.5f, false);
-    }
+	}
 
-    void FadeOut()
-    {
-        splashImage.CrossFadeAlpha(0.0f, 2.5f, false);
+	void FadeOut()
+	{
+		splashImage.CrossFadeAlpha(0.0f, 2.5f, false);
 		//splashText.CrossFadeAlpha(0.0f, 2.5f, false);
-    }
+	}
 	
 }

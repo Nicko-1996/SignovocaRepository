@@ -8,13 +8,7 @@ using UnityEngine.SceneManagement;
 public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	int RightAnswer;
-	int finishedCount;
-	//startSound
-	public AudioClip winSound;
-	public AudioClip loseSound;
-	private AudioSource winAudioSrc { get {return GetComponent<AudioSource> ();}}
-	private AudioSource loseAudioSrc { get {return GetComponent<AudioSource> ();}}
-	//endSound
+
 	public Text txtScoreCount;
 
 	public GameObject shitHead;
@@ -41,12 +35,6 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 		vbButtonsObject2.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 		vbButtonsObject3.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 
-		gameObject.AddComponent<AudioSource> ();
-		winAudioSrc.clip = winSound;
-		winAudioSrc.playOnAwake = false;
-		loseAudioSrc.clip = winSound;
-		loseAudioSrc.playOnAwake = false;
-
 		scoreCounter ();
 	}
 	
@@ -65,39 +53,23 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 		} else if ((vb.name == vbButtonsObject3.name) && (RightAnswer == 1)) {
 			Debug.Log (vb.name + "ANJ" + RightAnswer);
 			GameScoreCounting ();
-
 		} else {
-			GameWrongAnswer ();
+			Debug.Log ("Wrong answer");
+			reload ();
 		}
 	
-	}
-
-	void playWinSound(){
-		winAudioSrc.PlayOneShot (winSound);
-	}
-
-	void playLoseSound(){
-		loseAudioSrc.PlayOneShot (loseSound);
 	}
 
 	public void OnButtonReleased(VirtualButtonAbstractBehaviour vb){
 
 
-			
-	}
 
-	void GameWrongAnswer(){
-		disableVB ();
-		playLoseSound ();
-		StartCoroutine (waitLoseAudio ());
 	}
 
 	void GameScoreCounting(){
-		disableVB ();
-		playWinSound ();
 		ScoreCount += 1;
 		scoreCounter ();
-		StartCoroutine (waitWinAudio ());
+		reload ();
 	}
 
 	void TestFunction()
@@ -111,27 +83,8 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 	}
 
 	void reload(){
-		
 		SceneManager.LoadScene ("GameScene");
-		DontDestroyOnLoad (txtScoreCount);
+		DontDestroyOnLoad (shitHead);
 	}
 
-	private IEnumerator waitWinAudio ()
-	{
-		yield return new WaitForSeconds (winAudioSrc.clip.length);
-		reload ();
-	}
-
-	private IEnumerator waitLoseAudio ()
-	{
-		yield return new WaitForSeconds (loseAudioSrc.clip.length);
-		reload ();
-	}
-
-	private void disableVB(){
-		vbButtonsObject1.GetComponent<VirtualButtonBehaviour>().enabled = false;
-		vbButtonsObject2.GetComponent<VirtualButtonBehaviour>().enabled = false;
-		vbButtonsObject3.GetComponent<VirtualButtonBehaviour>().enabled = false;
-
-	}
 }
