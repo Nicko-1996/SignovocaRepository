@@ -71,12 +71,16 @@ public class gameLogics : MonoBehaviour {
 			X.name = "x" + i;
 			Vector3 pos = X.transform.position;    
 <<<<<<< HEAD
+<<<<<<< HEAD
 			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
 =======
 			X.transform.position = new Vector3 (pos.x, pos.y, pos.z);
 >>>>>>> parent of 50b2d73a... Game(Done so far)
+=======
+			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
+>>>>>>> parent of 4453e779... Medyo may error
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-			X.transform.localScale = new Vector3 (0.4f, 1f, 0.4f);
+			X.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}
