@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 924ac9bc857c2ac439a1d347d8fc62b7
 folderAsset: yes
 timeCreated: 1549946205
+=======
+guid: 4b7f16d7a6878e9439031b007c756e08
+folderAsset: yes
+timeCreated: 1549899692
+>>>>>>> parent of ae04f612... Merge branch 'master' of https://github.com/Nicko-1996/SignovocaRepository
 licenseType: Free
 DefaultImporter:
   userData: 
