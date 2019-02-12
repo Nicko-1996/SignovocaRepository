@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 guid: d2afa4d5cd0546d4aa343973e3b541b2
+<<<<<<< HEAD
 TextureImporter:
   fileIDToRecycleName:
     8900000: generatedCubemap
@@ -65,3 +66,5 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+>>>>>>> parent of 4453e779... Medyo may error
