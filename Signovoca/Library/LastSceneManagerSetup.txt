@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
+=======
+- path: Assets/Scenes/Signovoca.unity
+>>>>>>> parent of 4453e779... Medyo may error
   isLoaded: 1
   isActive: 1
