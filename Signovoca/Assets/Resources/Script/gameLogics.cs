@@ -26,10 +26,10 @@ public class gameLogics : MonoBehaviour {
  	void UniqueRandomInt()
 	{
 		for(int i = 0; i < 3; i++){
-			int val = Random.Range(0, 5);
+			int val = Random.Range(0, 21);
 			while(usedValues.Contains(val))
 			{
-				val = Random.Range(0, 5);
+				val = Random.Range(0, 21);
 			}
 			usedValues.Add(val);
 		}
@@ -61,8 +61,9 @@ public class gameLogics : MonoBehaviour {
 				Z.transform.parent = GameObject.Find ("ImageTarget").transform;
 				Z.name = "x" + i;
 				Vector3 pos1 = Z.transform.position;    
-				Z.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
+				Z.transform.position = new Vector3 (pos1.x,pos1.y + 1f,pos1.z);
 				Z.transform.rotation = Quaternion.Euler (0, 180, 0);
+				Z.transform.localScale = new Vector3 (0.05f, 1f, 0.05f);
 
 
 			}
@@ -71,9 +72,9 @@ public class gameLogics : MonoBehaviour {
 			X.transform.parent = GameObject.Find ("ImageTarget").transform;
 			X.name = "x" + i;
 			Vector3 pos = X.transform.position;    
-			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
+			X.transform.position = new Vector3 (pos.x, pos.y, pos.z);
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-			X.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
+			X.transform.localScale = new Vector3 (0.4f, 1f, 0.4f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}
