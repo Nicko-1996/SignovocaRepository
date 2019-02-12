@@ -60,9 +60,9 @@ public class gameLogics : MonoBehaviour {
 				Z.transform.parent = GameObject.Find ("ImageTarget").transform;
 				Z.name = "x" + i;
 				Vector3 pos1 = Z.transform.position;    
-				Z.transform.position = new Vector3 (pos1.x, pos1.y + 5f, pos1.z);
+				Z.transform.position = new Vector3 (pos1.x, -1.7f, pos1.z);
 				Z.transform.rotation = Quaternion.Euler (0, 180, 0);
-
+				Z.transform.localScale = new Vector3 (0.05f, 1f, 0.05f);
 
 			}
 			//for the Model Prefabs
@@ -70,22 +70,9 @@ public class gameLogics : MonoBehaviour {
 			X.transform.parent = GameObject.Find ("ImageTarget").transform;
 			X.name = "x" + i;
 			Vector3 pos = X.transform.position;    
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
-=======
 			X.transform.position = new Vector3 (pos.x, pos.y, pos.z);
->>>>>>> parent of 50b2d73a... Game(Done so far)
-=======
-			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
->>>>>>> parent of 4453e779... Medyo may error
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-=======
-			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
-			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-			X.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
->>>>>>> parent of 4453e779... Medyo may error
+			X.transform.localScale = new Vector3 (0.35f, 0.35f, 0.35f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}
@@ -110,4 +97,6 @@ public class gameLogics : MonoBehaviour {
 		UniqueRandomInt();
 		Models();
 	}
+
+
 }

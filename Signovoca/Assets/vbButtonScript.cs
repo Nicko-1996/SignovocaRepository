@@ -13,8 +13,10 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public GameObject shitHead;
 
-	public GameObject CorrectWrong;
-	public Transform[] CorWro;
+	public AudioClip rightSound;
+	private AudioSource rightAudioSrc{get{return GetComponent<AudioSource> (); }}
+	public AudioClip wrongSound;
+	private AudioSource wrongAudioSrc{get{return GetComponent<AudioSource> (); }}
 
 	public static int ScoreCount = 0;
 
@@ -26,14 +28,19 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	// Use this for initialization
 	void Start () {
-		shitHead = GameObject.Find ("Directional Light");
 
 		vbButtonsObject1 = GameObject.Find ("cmdAnswer1");
-		vbButtonsObject2 = GameObject.Find ("cmdAnswer2");
+		vbButtonsObject2 = GameObject.Find ("cmdAnswer");
 		vbButtonsObject3 = GameObject.Find ("cmdAnswer3");
 		vbButtonsObject1.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 		vbButtonsObject2.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 		vbButtonsObject3.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
+
+		gameObject.AddComponent<AudioSource> ();
+		rightAudioSrc.clip = rightSound;
+		rightAudioSrc.playOnAwake = false;
+		wrongAudioSrc.clip = rightSound;
+		wrongAudioSrc.playOnAwake = false;
 
 		scoreCounter ();
 	}
@@ -45,20 +52,13 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public void OnButtonPressed(VirtualButtonAbstractBehaviour vb){
 		if ((vb.name == vbButtonsObject1.name) && (RightAnswer == 2)) {
-			Debug.Log (vb.name + "RON" + RightAnswer);
-			GameScoreCounting ();
+			rightAnwer ();
 		} else if ((vb.name == vbButtonsObject2.name) && (RightAnswer == 0)) {
-			Debug.Log (vb.name + "MICA" + RightAnswer);
-			GameScoreCounting ();
+			rightAnwer ();
 		} else if ((vb.name == vbButtonsObject3.name) && (RightAnswer == 1)) {
-			Debug.Log (vb.name + "ANJ" + RightAnswer);
-			GameScoreCounting ();
+			rightAnwer ();
 		} else {
-			Debug.Log ("Wrong answer");
-<<<<<<< HEAD
-			reload ();
-=======
->>>>>>> parent of 4ce9ad57... Sounds(Done)
+			wrongAnswer ();
 		}
 	
 	}
@@ -69,10 +69,18 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	}
 
-	void GameScoreCounting(){
+	void rightAnwer(){
+		disableButtons ();
+		playRightSound ();
 		ScoreCount += 1;
 		scoreCounter ();
-		reload ();
+		StartCoroutine(soundRightDelay());
+	}
+
+	void wrongAnswer(){
+		disableButtons ();
+		playWrongSound ();
+		StartCoroutine(soundWrongDelay());
 	}
 
 	void TestFunction()
@@ -87,7 +95,28 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 
 	void reload(){
 		SceneManager.LoadScene ("GameScene");
-		DontDestroyOnLoad (shitHead);
+		DontDestroyOnLoad (txtScoreCount);
 	}
 
+	void playRightSound(){
+		rightAudioSrc.PlayOneShot (rightSound);
+	}
+
+	void playWrongSound(){
+		wrongAudioSrc.PlayOneShot (wrongSound);
+	}
+	IEnumerator soundRightDelay(){
+		yield return new WaitForSeconds(rightAudioSrc.clip.length);
+		reload ();
+	}
+	IEnumerator soundWrongDelay(){
+		yield return new WaitForSeconds(wrongAudioSrc.clip.length);
+		reload ();
+	}
+
+	private void disableButtons(){
+		vbButtonsObject1.GetComponent<VirtualButtonBehaviour>().enabled = false;
+		vbButtonsObject2.GetComponent<VirtualButtonBehaviour>().enabled = false;
+		vbButtonsObject3.GetComponent<VirtualButtonBehaviour>().enabled = false;
+	}
 }
