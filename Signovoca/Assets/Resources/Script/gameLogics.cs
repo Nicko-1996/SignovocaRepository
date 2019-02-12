@@ -71,10 +71,11 @@ public class gameLogics : MonoBehaviour {
 			X = Instantiate (modelPrefabs [usedValues[i]], planePlaces [usedValues2[i]].transform.position, planePlaces [i].transform.rotation) as Transform;
 			X.transform.parent = GameObject.Find ("ImageTarget").transform;
 			X.name = "x" + i;
-			Vector3 pos = X.transform.position;    
-			X.transform.position = new Vector3 (pos.x, pos.y, pos.z);
+			Vector3 pos = X.transform.position;   
+			X.transform.position = new Vector3 (pos.x, 0, pos.z);
+			Debug.Log("POS Y:" + pos.y);
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-			X.transform.localScale = new Vector3 (0.4f, 1f, 0.4f);
+			X.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}
