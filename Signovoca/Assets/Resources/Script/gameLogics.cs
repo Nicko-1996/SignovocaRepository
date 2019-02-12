@@ -80,7 +80,6 @@ public class gameLogics : MonoBehaviour {
 			X.transform.position = new Vector3 (pos.x, pos.y + 5f, pos.z + 10f);
 >>>>>>> parent of 4453e779... Medyo may error
 			X.transform.rotation = Quaternion.Euler (0, 180, 0);
-			X.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
 			if (AnswerNumber == usedValues [i]) {
 				GameAnswer = usedValues2 [i];
 			}

@@ -55,7 +55,10 @@ public class vbButtonScript : MonoBehaviour, IVirtualButtonEventHandler {
 			GameScoreCounting ();
 		} else {
 			Debug.Log ("Wrong answer");
+<<<<<<< HEAD
 			reload ();
+=======
+>>>>>>> parent of 4ce9ad57... Sounds(Done)
 		}
 	
 	}
