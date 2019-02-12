@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\vbButtonScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Script\gameLogics.cs" Line="77" Column="1" />
+      <File FileName="Assets\Resources\Script\gameLogics.cs" Line="64" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
