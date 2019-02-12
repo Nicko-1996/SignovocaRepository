@@ -1,8 +1,12 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
 =======
 - path: Assets/Scenes/Signovoca.unity
 >>>>>>> parent of 4453e779... Medyo may error
+=======
+- path: Assets/Scenes/Signovoca.unity
+>>>>>>> parent of 31120bca... Instructions
   isLoaded: 1
   isActive: 1
